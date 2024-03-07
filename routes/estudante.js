@@ -1,0 +1,22 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('Você está na aba inicial');
+});
+
+router.get('/exercicios', function(req, res, next) {
+  res.send('Muitos');
+});
+
+router.get('/provas', function(req, res, next) {
+    res.send('Portugues');
+  });
+
+router.get('/notas', function(req, res, next) {
+    res.send('10 , 10 , 10 , 10, 10');
+  });
+  
+
+module.exports = router;
