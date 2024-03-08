@@ -3,19 +3,19 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    res.send('Você está na raiz de fornecedores');
 });
 
 router.get('/produtos', function(req, res, next) {
-    res.render('esse é produtos', { title: 'Express' });
-  });
+    res.send('respond with a resource');
+});
 
   router.get('/clientes', function(req, res, next) {
-    res.render('esse é clientes', { title: 'Express' });
-  });
+    res.send('respond with a resource');
+});
 
   router.get('/tecnoligia', function(req, res, next) {
-    res.render('esse é tecnologia', { title: 'Express' });
-  });
+    res.send('respond with a resource');
+});
 
 module.exports = router;
