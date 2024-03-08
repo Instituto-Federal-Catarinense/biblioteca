@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('view-pug:server');
+var debug = require('debug')('biblioteca:server');
 var http = require('http');
 
 /**
