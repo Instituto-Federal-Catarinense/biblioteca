@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a zfgxghsjkllçlçççççççç');
+  res.send('Você está na raiz de fornecedores.');
 });
 
 router.get('/produtos', function(req, res, next) {
