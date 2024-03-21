@@ -11,6 +11,16 @@ var esportesRouter = require('./routes/esportes')
 
 var app = express();
 
+// Set up mongoose conectiom
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false)
+const mongoDB = "mongodb+srv://pires:pires123@piroca.tmpvs3v.mongodb.net/?retryWrites=true&w=majority&appName=piroca"
+
+main().catch((err) => console.log (err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
