@@ -14,7 +14,7 @@ var app = express();
 // Set up moongoose connections
 const mongoose = require("mongoose");
 mongoose.set("stricQuery", false);
-const mongoDB = "mongodb+srv://guiritter7:<password>@cluster0.ictxhq0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoDB = "mongodb+srv://guiritter7:up0ZGa9kQJFLTAb4@cluster0.ictxhq0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 main().catch((err) => console.log(err));
 async function main() {
