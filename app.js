@@ -10,6 +10,16 @@ var fornecedoresRoutex = require('./routes/fornecedores');
 
 var app = express();
 
+//set up mongoose connection
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+const mongoDB = "mongodb+srv://latrel:<PYu6E7yEWXpoZCra>@latrel.jnhsngj.mongodb.net/?retryWrites=true&w=majority&appName=latrel";
+
+mainModule().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
