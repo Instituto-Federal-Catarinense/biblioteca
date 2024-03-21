@@ -6,15 +6,15 @@ router.get('/', function(req, res, next) {
 res.send('respond with a resource');
 });
 
-router.get('Produtos', function(req, res, next) {
+router.get('produtos', function(req, res, next) {
 res.send('Produtos');
 });
 
-router.get('Promocoes', function(req, res, next) {
+router.get('promocoes', function(req, res, next) {
 res.send('Promocoes');
 });
 
-router.get('Listagem', function(req, res, next) {
+router.get('listagem', function(req, res, next) {
 res.send('Listagem');
 });
 
