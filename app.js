@@ -11,6 +11,17 @@ var fornecedoresRouter = require('./routes/fornecedores');
 
 var app = express();
 
+//Set up mongoose connection
+const mongoose = require("mongoose");
+const {connect} = require('http2');
+mongoose.set("strictQuery", false);
+const mongoDB = "mongodb+srv://isahferreiramedeiros:2324isah@cluster0.zj2jlsu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+main().catch((err) => console.log(err));
+async function main(){
+  await mongoose connect (mongodb);
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
