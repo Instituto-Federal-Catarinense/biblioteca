@@ -11,6 +11,16 @@ var esporteRouter = require('./routes/esporte');
 
 var app = express();
 
+//Set up mongoose connection
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+const mongoDB = "mongodb+srv://lolomachadoteixeira:nsgauptx2GLCmNGS@cluster0.ao8qltf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
