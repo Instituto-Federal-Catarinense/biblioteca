@@ -11,6 +11,18 @@ var produtosRouter = require('./routes/produtos');
 
 var app = express();
 
+// set up mongoose connection
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+const mongoDB = "mongodb+srv://dani980boo:!Daniel987@cluster0.pjg00nk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
+
+//mongodb+srv://dani980boo:<password>@cluster0.pjg00nk.mongodb.net/
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
