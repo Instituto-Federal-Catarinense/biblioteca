@@ -10,6 +10,15 @@ var estudantesRouter = require('./routes/estudantes');
 var esportesRouter = require('./routes/esportes');
 
 var app = express();
+ //set up mongoose connection 
+ const mongoose = require( "mongoose");
+ mongoose.set ("strictQuery", false );
+ const mongoDB = "mongodb+srv://camilalamarque10:camilalamarque10@cluster0.vk3r2nj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+ main(). catch ((err) => console.log(err));
+ async function main () {
+  await mongoose.connect (mongoDB);
+ }
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
