@@ -11,6 +11,17 @@ var estudantesRouter = require('./routes/estudantes');
 
 var app = express();
 
+
+// set up mongoose connection
+const mongoose = requiere("mongoose");
+mongoose.set("strictQuery",false);
+const mongoDB ="url";
+
+main().catch((err)=> console.log(err));
+async function main(){
+  await mongoose.connect(mongoDB);
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
