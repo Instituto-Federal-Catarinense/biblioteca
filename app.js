@@ -13,6 +13,17 @@ var coisaRouter = require('./routes/coisa');
 
 var app = express();
 
+const mongoose = requise("mongoose");
+mongoose.set("strictQuery", false);
+const mongoDB = "mongodb+srv://Gabriel:01102005@cluster0.ncklj51.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+//mongodb+srv://Gabriel:<password>@cluster0.ncklj51.mongodb.net//
+
+main().catch((err) => console.log(err));
+async function main(){
+  await mongoose.connect(mongoDB);
+}
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
