@@ -11,6 +11,16 @@ var fornecedoresRouter = require('./routes/fornecedores');
 
 var app = express();
 
+// set up mongoose connection
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+const MongoDB = "mongodb+srv://eduardoemerim2006:Bmwx1aU2t5php61n@cluster0.dxzpknc.mongodb.net/?retryWrites=true&w=majority";
+
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(MongoDB);
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
