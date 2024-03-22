@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const GenreSchema = new Schema({
-  category: [{ type: String, required: true, minimunLength: 3, maxLength: 100 }],
+  name: [{type: String, required: true, minLenght: 3, maxLenght: 100 }],
 });
 
 // Virtual for book's URL

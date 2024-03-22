@@ -10,10 +10,10 @@ const BookSchema = new Schema({
   genre: [{ type: Schema.Types.ObjectId, ref: "Genre" }],
 });
 
-// Virtual for book's URL
+// Virtual for Book's URL
 BookSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
-  return `/catalog/book/${this._id}`;
+  return `/catalog/Book/${this._id}`;
 });
 
 // Export model
