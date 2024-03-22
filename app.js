@@ -9,6 +9,14 @@ var usersRouter = require('./routes/users');
 var fornecedoresRouter = require('./routes/fornecedores');
 var produtosRouter = require('./routes/produtos');
 var app = express();
+const mongoose = require("mongoose");
+mongoose.set("strictquery", false);
+const mongoDB = "mongodb+srv://nathanyamabille2006:QoPWj5R60jtn6v9e@cluster0.4lu0jna.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+mainModule().catch((err) => console.log(err));
+async function main () {
+  await mongoose.connect(mongoDB);
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
